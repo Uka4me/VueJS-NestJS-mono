@@ -8,9 +8,9 @@
     "build": "npm run clean && vue-tsc && vite build",
     "preview": "vite preview",
     "clean": "npx rimraf dist",
-    "lint:script": "eslint --ext .ts,vue --ignore-path .gitignore .",
-    "lint:style": "stylelint src/**/*.{css,scss,vue}",
-    "lint:markup": "vue-tsc --noEmit"
+    "lint:script": "npx eslint --ext .ts,vue --ignore-path .gitignore .",
+    "lint:style": "npx stylelint src/**/*.{css,scss,vue}",
+    "lint:markup": "npx vue-tsc --noEmit"
   },
   "dependencies": {
     "vue": "^3.2.47"
@@ -32,6 +32,6 @@
     "vue-tsc": "^1.2.0"
   },
   "lint-staged": {
-    "*.{css,scss,vue}": "stylelint --fix"
+    "*.{css,scss,vue}": "npx stylelint --fix"
   }
 }
