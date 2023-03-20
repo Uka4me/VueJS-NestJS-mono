@@ -37,7 +37,7 @@
     }
   },
   "lint-staged": {
-    "*.{ts,vue}": "npx eslint . --ext .js,.jsx,.ts,.tsx,.vue --fix",
-    "*.{html,scss,json}": "npx prettier --write \"**/*.{html,scss,json}\""
+    "*.{js,jsx,ts,tsx,vue}": "eslint --fix",
+    "*.{html,scss,json}": "prettier --write"
   }
 }
