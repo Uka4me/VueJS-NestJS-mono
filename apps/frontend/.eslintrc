@@ -13,8 +13,8 @@
     }
   },
   "env": {
-      "browser": true,
-      "es2021": true
+    "browser": true,
+    "es2021": true
   },
   "extends": [
     "plugin:vue/vue3-recommended",
@@ -24,8 +24,7 @@
     "alloy/vue",
     "alloy/typescript"
   ],
-  "plugins": [
-  ],
+  "plugins": [],
   "rules": {
     "@typescript-eslint/prefer-optional-chain": "off"
   }

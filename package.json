@@ -12,7 +12,7 @@
     "prepare": "npx husky install",
     "frontend": "npm run --workspace=@root/frontend",
     "backend": "npm run --workspace=@root/backend",
-    "format": "npm run lint --fix && npx prettier --write **/*.{html,scss,json}",
+    "format": "npm run lint --fix && npx prettier --write \"**/*.{html,scss,json}\"",
     "lint": "npx eslint . --ext .js,.jsx,.ts,.tsx,.vue"
   },
   "devDependencies": {
@@ -37,7 +37,7 @@
     }
   },
   "lint-staged": {
-    "*.{ts,vue}": "npx eslint . --fix",
-    "*": "npx prettier -w -u"
+    "*.{ts,vue}": "npx eslint . --ext .js,.jsx,.ts,.tsx,.vue --fix",
+    "*.{html,scss,json}": "npx prettier --write \"**/*.{html,scss,json}\""
   }
 }
