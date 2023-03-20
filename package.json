@@ -9,6 +9,7 @@
     "common/*"
   ],
   "scripts": {
+    "prepare": "npx husky install",
     "frontend": "npm run --workspace=@root/frontend",
     "backend": "npm run --workspace=@root/backend",
     "format": "npm run lint --fix && npx prettier --write **/*.{html,scss,json}",
@@ -32,11 +33,11 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged"
+      "pre-commit": "npx lint-staged"
     }
   },
   "lint-staged": {
-    "*.{ts,vue}": "eslint --fix",
-    "*": "prettier -w -u"
+    "*.{ts,vue}": "npx eslint . --fix",
+    "*": "npx prettier -w -u"
   }
 }
