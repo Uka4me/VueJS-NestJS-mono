@@ -8,6 +8,7 @@
     "build": "npm run clean && vue-tsc && vite build",
     "preview": "vite preview",
     "clean": "npx rimraf dist",
+    "docker": "docker build --pull --rm -f \"Dockerfile\" -t frontend:latest ../..",
     "lint:script": "npx eslint --ext .ts,vue --ignore-path .gitignore .",
     "lint:style": "npx stylelint src/**/*.{css,scss,vue}",
     "lint:markup": "npx vue-tsc --noEmit"
@@ -16,8 +17,6 @@
     "vue": "^3.2.47"
   },
   "devDependencies": {
-    "@babel/core": "^7.21.3",
-    "@babel/eslint-parser": "^7.21.3",
     "@vitejs/plugin-vue": "^4.1.0",
     "@vue/eslint-config-prettier": "^7.1.0",
     "@vue/eslint-config-typescript": "^11.0.2",

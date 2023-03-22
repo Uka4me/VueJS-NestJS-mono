@@ -4,13 +4,7 @@
     "ecmaVersion": 2021,
     "project": "./apps/frontend/tsconfig.json",
     "sourceType": "module",
-    "parser": {
-      "js": "@babel/eslint-parser",
-      "jsx": "@babel/eslint-parser",
-
-      "ts": "@typescript-eslint/parser",
-      "tsx": "@typescript-eslint/parser"
-    }
+    "parser": "@typescript-eslint/parser"
   },
   "env": {
     "browser": true,
@@ -18,14 +12,16 @@
   },
   "extends": [
     "plugin:vue/vue3-recommended",
-    "eslint:recommended",
     "@vue/typescript/recommended",
     "alloy",
     "alloy/vue",
-    "alloy/typescript"
+    "alloy/typescript",
+    "../../.eslintrc"
   ],
   "plugins": [],
   "rules": {
-    "@typescript-eslint/prefer-optional-chain": "off"
+    "@typescript-eslint/prefer-optional-chain": "off",
+    "no-console": "error",
+    "no-debugger": "error"
   }
 }
