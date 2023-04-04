@@ -4,6 +4,7 @@ import { JwtAuthGuard } from '@/services/auth/jwt-auth.guard';
 import { IFastifyReply } from '@/core/interfaces';
 import { JwtPayload } from '@/core/dtos';
 
+@UseGuards(JwtAuthGuard)
 @Controller()
 export class AppController {
   constructor(private readonly appService: AppService) {}
@@ -13,7 +14,6 @@ export class AppController {
     return this.appService.getHello();
   }
 
-  @UseGuards(JwtAuthGuard)
   @Get('profile')
   async getProfile(@Request() req: IFastifyReply): Promise<JwtPayload> {
     return req.user;
