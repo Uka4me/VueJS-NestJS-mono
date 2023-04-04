@@ -45,16 +45,13 @@
   }
 
   form > input {
-    margin: 0 0 1em 0;
+    margin: 0 0 1em;
+    padding:10px;
+    border:0;
+    box-shadow:0 0 15px 4px rgba(0 0 0 6%);
   }
 
   button {
     width: 100%;
-  }
-
-  input {
-    padding:10px;
-    border:0;
-    box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
   }
 </style>

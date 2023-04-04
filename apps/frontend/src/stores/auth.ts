@@ -11,7 +11,7 @@ interface State {
 export const useAuthStore = defineStore("auth", {
   state: (): State => ({
     user: undefined,
-    token: localStorage.getItem('token') ? JSON.parse(localStorage.getItem('token')) : undefined,
+    token: localStorage.getItem('token') ? JSON.parse(localStorage.getItem('token') ?? '{}') : undefined,
     returnUrl: undefined
   }),
 
